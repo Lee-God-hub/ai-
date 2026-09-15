@@ -1,0 +1,1 @@
+<view class="test-page"><view class="test-header"><text class="test-title">🏠 智能房产平台</text></view><view class="test-content"><text class="test-message">项目运行成功！</text><button class="test-button" bindtap="{{a}}">点击测试功能</button></view></view>

@@ -1,0 +1,166 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "智能房产",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/search/search",
+			"style": {
+				"navigationBarTitleText": "搜索房源"
+			}
+		},
+		{
+			"path": "pages/property/detail",
+			"style": {
+				"navigationBarTitleText": "房源详情"
+			}
+		},
+		{
+			"path": "pages/ai/qa",
+			"style": {
+				"navigationBarTitleText": "AI问答助手"
+			}
+		},
+		{
+			"path": "pages/ai/recommend",
+			"style": {
+				"navigationBarTitleText": "智能推荐"
+			}
+		},
+		{
+			"path": "pages/user/profile",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
+		},
+		{
+			"path": "pages/user/login",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		},
+		{
+			"path": "pages/user/register",
+			"style": {
+				"navigationBarTitleText": "注册"
+			}
+		},
+		{
+			"path": "pages/landlord/publish",
+			"style": {
+				"navigationBarTitleText": "发布房源"
+			}
+		},
+		{
+			"path": "pages/landlord/manage",
+			"style": {
+				"navigationBarTitleText": "房源管理"
+			}
+		},
+		{
+			"path": "pages/landlord/appointments",
+			"style": {
+				"navigationBarTitleText": "预约管理",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/landlord/messages",
+			"style": {
+				"navigationBarTitleText": "我的消息",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/landlord/conversation",
+			"style": {
+				"navigationBarTitleText": "对话详情"
+			}
+		},
+		{
+			"path": "pages/favorites/index",
+			"style": {
+				"navigationBarTitleText": "我的收藏"
+			}
+		},
+		{
+			"path": "pages/user/messages",
+			"style": {
+				"navigationBarTitleText": "我的消息"
+			}
+		},
+		{
+			"path": "pages/user/chat",
+			"style": {
+				"navigationBarTitleText": "聊天"
+			}
+		},
+		{
+			"path": "pages/transaction/process",
+			"style": {
+				"navigationBarTitleText": "交易流程"
+			}
+		},
+		{
+			"path": "pages/appointment/list",
+			"style": {
+				"navigationBarTitleText": "我的预约",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/test/test",
+			"style": {
+				"navigationBarTitleText": "测试页面"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "智能房产",
+		"navigationBarBackgroundColor": "#1677ff",
+		"backgroundColor": "#F7F8FA"
+	},
+	"tabBar": {
+		"color": "#999999",
+		"selectedColor": "#1677ff",
+		"borderStyle": "white",
+		"backgroundColor": "#ffffff",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tab-home.png",
+				"selectedIconPath": "static/tab-home-current.png",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/search/search",
+				"iconPath": "static/tab-search.png",
+				"selectedIconPath": "static/tab-search-current.png",
+				"text": "搜索"
+			},
+			{
+				"pagePath": "pages/ai/qa",
+				"iconPath": "static/tab-ai.png",
+				"selectedIconPath": "static/tab-ai-current.png",
+				"text": "AI助手"
+			},
+			{
+				"pagePath": "pages/user/messages",
+				"iconPath": "static/tab-my.png",
+				"selectedIconPath": "static/tab-my-current.png",
+				"text": "消息"
+			},
+			{
+				"pagePath": "pages/user/profile",
+				"iconPath": "static/tab-my.png",
+				"selectedIconPath": "static/tab-my-current.png",
+				"text": "我的"
+			}
+		]
+	}
+}

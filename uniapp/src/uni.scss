@@ -1,0 +1,163 @@
+/**
+ * 全局样式变量 - 统一颜色方案
+ * 智能房产交易平台移动端 - 浅蓝+暖橙主题
+ */
+
+/* 主题色 - 浅蓝，与web端统一 */
+$primary-color: #1677ff;
+$primary-color-light: #4096ff;
+$primary-color-dark: #0958d9;
+$primary-gradient: linear-gradient(135deg, #1677ff 0%, #4096ff 100%);
+
+/* 辅助色 - 暖橙 */
+$secondary-color: #ff7d00;
+$secondary-color-light: #ff9a3d;
+$secondary-color-dark: #d46500;
+$secondary-gradient: linear-gradient(135deg, #ff7d00 0%, #ff9a3d 100%);
+
+/* 主辅渐变 - 蓝橙渐变 */
+$main-gradient: linear-gradient(135deg, #1677ff 0%, #ff7d00 100%);
+
+/* 功能色 - 与web端保持一致 */
+$success-color: #07c160;
+$success-color-light: #e8f5e9;
+$warning-color: #ff9500;
+$warning-color-light: #fff3e0;
+$error-color: #ff4d4f;
+$error-color-light: #fff1f0;
+$info-color: #666666;
+$info-color-light: #f5f7fa;
+
+/* 价格色 - 使用暖橙色 */
+$price-color: #ff7d00;
+
+/* 文字颜色 - 与web端一致 */
+$text-color-primary: #1f2937;
+$text-color-regular: #4b5563;
+$text-color-secondary: #9ca3af;
+$text-color-placeholder: #d1d5db;
+$text-color-disabled: #d1d5db;
+$text-color-inverse: #ffffff;
+
+/* 背景颜色 - 与web端一致 */
+$bg-color-page: #f5f7fa;
+$bg-color: #ffffff;
+$bg-color-light: #f9fafb;
+$bg-color-hover: #f3f4f6;
+$bg-color-mask: rgba(0, 0, 0, 0.5);
+
+/* 边框颜色 - 与web端一致 */
+$border-color: #e5e7eb;
+$border-color-light: #f3f4f6;
+
+/* 阴影 - 柔和阴影效果 */
+$shadow-xs: 0 1rpx 3rpx rgba(0, 0, 0, 0.04);
+$shadow-sm: 0 2rpx 8rpx rgba(0, 0, 0, 0.06);
+$shadow-base: 0 4rpx 16rpx rgba(0, 0, 0, 0.08);
+$shadow-lg: 0 8rpx 24rpx rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 12rpx 40rpx rgba(0, 0, 0, 0.12);
+
+/* 圆角 - 统一圆角规范 */
+$radius-sm: 8rpx;
+$radius-base: 12rpx;
+$radius-lg: 16rpx;
+$radius-xl: 24rpx;
+$radius-2xl: 32rpx;
+$radius-full: 9999rpx;
+
+/* 间距 - 统一间距规范 */
+$spacing-xs: 8rpx;
+$spacing-sm: 16rpx;
+$spacing-base: 24rpx;
+$spacing-lg: 32rpx;
+$spacing-xl: 40rpx;
+$spacing-2xl: 48rpx;
+
+/* 过渡动画 */
+$transition-fast: 0.15s ease;
+$transition-base: 0.25s ease;
+$transition-slow: 0.35s ease;
+
+/* ===== 兼容PC端风格变量名（别名） ===== */
+
+/* 主色/辅助色别名 */
+$accent-color: $secondary-color;
+$accent-color-light: $secondary-color-light;
+$accent-color-dark: $secondary-color-dark;
+$accent-color-bg: rgba($secondary-color, 0.1);
+$accent-color-bg-light: rgba($secondary-color, 0.05);
+$primary-color-bg: rgba($primary-color, 0.1);
+$primary-color-bg-light: rgba($primary-color, 0.05);
+
+/* 文字颜色别名 - 注意：原变量已定义，这里只补充缺失的 */
+$text-color-tertiary: $text-color-secondary;
+
+/* 背景色别名 - 注意：原变量已定义，这里只补充缺失的 */
+
+/* 边框色别名 - 注意：原变量已定义，这里只补充缺失的 */
+$border-color-lighter: $border-color-light;
+
+/* 圆角别名（仅补充PC端风格命名） */
+$radius-md: $radius-base;
+$radius-xxl: $radius-2xl;
+
+/* 阴影别名（仅补充PC端风格命名） */
+$shadow-card-hover: $shadow-xl;
+
+/* 间距别名（仅补充PC端风格命名） */
+$spacing-md: $spacing-base;
+
+/* uni-app 官方变量兼容 */
+$uni-color-primary: $primary-color;
+$uni-color-success: $success-color;
+$uni-color-warning: $warning-color;
+$uni-color-error: $error-color;
+
+$uni-text-color: $text-color-primary;
+$uni-text-color-inverse: $text-color-inverse;
+$uni-text-color-grey: $text-color-secondary;
+$uni-text-color-placeholder: $text-color-placeholder;
+$uni-text-color-disable: $text-color-disabled;
+
+$uni-bg-color: $bg-color;
+$uni-bg-color-grey: $bg-color-page;
+$uni-bg-color-hover: $bg-color-hover;
+$uni-bg-color-mask: $bg-color-mask;
+
+$uni-border-color: $border-color;
+
+/* 尺寸变量 */
+$uni-font-size-xs: 20rpx;
+$uni-font-size-sm: 24rpx;
+$uni-font-size-base: 28rpx;
+$uni-font-size-lg: 32rpx;
+$uni-font-size-xl: 36rpx;
+$uni-font-size-2xl: 40rpx;
+$uni-font-size-3xl: 48rpx;
+
+$uni-img-size-sm: 40rpx;
+$uni-img-size-base: 52rpx;
+$uni-img-size-lg: 80rpx;
+
+$uni-border-radius-sm: $radius-sm;
+$uni-border-radius-base: $radius-base;
+$uni-border-radius-lg: $radius-lg;
+$uni-border-radius-xl: $radius-xl;
+$uni-border-radius-circle: 50%;
+
+$uni-spacing-row-sm: $spacing-sm;
+$uni-spacing-row-base: $spacing-base;
+$uni-spacing-row-lg: $spacing-lg;
+
+$uni-spacing-col-sm: $spacing-xs;
+$uni-spacing-col-base: $spacing-sm;
+$uni-spacing-col-lg: $spacing-base;
+
+$uni-opacity-disabled: 0.4;
+
+$uni-color-title: $text-color-primary;
+$uni-font-size-title: $uni-font-size-2xl;
+$uni-color-subtitle: $text-color-regular;
+$uni-font-size-subtitle: $uni-font-size-xl;
+$uni-color-paragraph: $text-color-regular;
+$uni-font-size-paragraph: $uni-font-size-base;

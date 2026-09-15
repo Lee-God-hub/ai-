@@ -1,0 +1,1 @@
+import{W as e}from"./index-CFm024uy.js";const t={getMyList:()=>e.get("/favorite/my-list"),getAdminFavoriteList:t=>e.get("/favorite/admin/list",t),check:t=>e.get(`/favorite/check/${t}`),add:t=>e.post(`/favorite/add/${t}`),remove:t=>e.delete(`/favorite/remove/${t}`),delete:t=>e.delete(`/favorite/${t}`)};export{t as f};

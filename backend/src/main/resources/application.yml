@@ -1,0 +1,151 @@
+# 智能房产交易平台配置文件
+# 项目名称：基于AI的智能房产交易平台
+# 技术栈：SpringBoot + Vue3 + MySQL
+
+# 服务器配置
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+# Spring配置
+spring:
+  # 应用名称
+  application:
+    name: smart-property-platform
+  
+  # 数据源配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/smart_property_db?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    hikari:
+      connection-timeout: 30000
+      maximum-pool-size: 20
+      minimum-idle: 5
+      idle-timeout: 600000
+      max-lifetime: 1800000
+  
+  # JPA配置
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  
+  # 文件上传配置
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+# MyBatis-Plus配置
+mybatis-plus:
+  # mapper.xml文件位置
+  mapper-locations: classpath:mapper/*.xml
+  # 实体类包路径
+  type-aliases-package: com.smartproperty.entity
+  configuration:
+    # 开启驼峰命名转换
+    map-underscore-to-camel-case: true
+    # 日志实现
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+# 日志配置
+logging:
+  level:
+    com.smartproperty: DEBUG
+    org.springframework.web: INFO
+    org.mybatis: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{50} - %msg%n"
+  file:
+    name: logs/smart-property.log
+    max-size: 10MB
+    max-history: 30
+
+# 自定义配置
+smart-property:
+  # JWT配置（预留）
+  jwt:
+    secret: smart-property-secret-key-2024
+    expiration: 86400000
+  # 文件上传路径
+  upload:
+    path: ./uploads/
+  # 跨域配置
+  cors:
+    allowed-origins: http://localhost:3000,http://localhost:3002,http://localhost:5173,http://localhost:5174
+    allowed-methods: GET,POST,PUT,DELETE,OPTIONS
+    allowed-headers: "*"
+    allow-credentials: true
+  # AI功能配置
+  ai:
+    # AI功能总开关
+    enabled: true
+    # 火山方舟AI大模型配置（豆包Doubao-Smart-Router）
+    zhipu:
+      api-key: ark-d1a66802-4e01-429d-ba58-9197692ba2ae-9391d
+      model: ep-20260604113450-vfx5f
+    # AI问答配置
+    qa:
+      # 问答功能开关
+      enabled: true
+      # 问答历史记录保留天数
+      history-retention-days: 90
+      # 单次查询历史记录最大数量
+      max-history-limit: 100
+    # 文案生成配置
+    content:
+      # 文案生成功能开关
+      enabled: true
+      # 简短版文案最小字数
+      short-min-length: 100
+      # 简短版文案最大字数
+      short-max-length: 200
+      # 详细版文案最小字数
+      detailed-min-length: 300
+      # 详细版文案最大字数
+      detailed-max-length: 500
+      # 文案生成历史保留天数
+      history-retention-days: 180
+    # 智能推荐配置
+    recommendation:
+      # 推荐功能开关
+      enabled: true
+      # 推荐算法版本
+      algorithm-version: v1.0
+      # 默认推荐数量
+      default-limit: 10
+      # 最大推荐数量
+      max-limit: 50
+      # 最小用户行为数据量（用于生成推荐）
+      min-behavior-count: 3
+      # 推荐日志保留天数
+      log-retention-days: 90
+      # 用户行为日志保留天数
+      behavior-retention-days: 180
+      # 推荐评分权重配置
+      weights:
+        city: 0.20
+        district: 0.15
+        property-type: 0.15
+        transaction-type: 0.10
+        price: 0.20
+        area: 0.10
+        view-count: 0.10

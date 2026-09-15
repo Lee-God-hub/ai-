@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.smartproperty.mapper.PaymentRecordMapper">
+    
+    <resultMap id="BaseResultMap" type="com.smartproperty.entity.PaymentRecord">
+        <id column="id" property="id" />
+        <result column="appointment_id" property="appointmentId" />
+        <result column="contract_id" property="contractId" />
+        <result column="payment_no" property="paymentNo" />
+        <result column="payment_type" property="paymentType" />
+        <result column="payment_amount" property="paymentAmount" />
+        <result column="payer_id" property="payerId" />
+        <result column="payer_name" property="payerName" />
+        <result column="payee_id" property="payeeId" />
+        <result column="payee_name" property="payeeName" />
+        <result column="payment_method" property="paymentMethod" />
+        <result column="payment_status" property="paymentStatus" />
+        <result column="payment_time" property="paymentTime" />
+        <result column="remark" property="remark" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 根据预约ID查询支付记录 -->
+    <select id="selectByAppointmentId" resultMap="BaseResultMap">
+        SELECT * FROM payment_record
+        WHERE appointment_id = #{appointmentId}
+        ORDER BY create_time DESC
+    </select>
+
+    <!-- 根据合同ID查询支付记录 -->
+    <select id="selectByContractId" resultMap="BaseResultMap">
+        SELECT * FROM payment_record
+        WHERE contract_id = #{contractId}
+        ORDER BY create_time DESC
+    </select>
+
+    <!-- 插入支付记录 -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO payment_record (
+            appointment_id, contract_id, payment_no, payment_type,
+            payment_amount, payer_id, payer_name, payee_id, payee_name,
+            payment_method, payment_status, payment_time, remark,
+            create_time, update_time
+        ) VALUES (
+            #{appointmentId}, #{contractId}, #{paymentNo}, #{paymentType},
+            #{paymentAmount}, #{payerId}, #{payerName}, #{payeeId}, #{payeeName},
+            #{paymentMethod}, #{paymentStatus}, #{paymentTime}, #{remark},
+            NOW(), NOW()
+        )
+    </insert>
+
+    <!-- 更新支付状态 -->
+    <update id="updateById">
+        UPDATE payment_record
+        SET payment_status = #{paymentStatus},
+            payment_time = #{paymentTime},
+            remark = #{remark},
+            update_time = NOW()
+        WHERE id = #{id}
+    </update>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        SELECT * FROM payment_record
+        WHERE id = #{id}
+    </select>
+
+</mapper>

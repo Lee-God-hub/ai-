@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.smartproperty.mapper.TransactionProcessLogMapper">
+    
+    <resultMap id="BaseResultMap" type="com.smartproperty.entity.TransactionProcessLog">
+        <id column="id" property="id" />
+        <result column="appointment_id" property="appointmentId" />
+        <result column="stage_code" property="stageCode" />
+        <result column="stage_name" property="stageName" />
+        <result column="status" property="status" />
+        <result column="operator_id" property="operatorId" />
+        <result column="operator_name" property="operatorName" />
+        <result column="remark" property="remark" />
+        <result column="attachment_urls" property="attachmentUrls" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 根据预约ID查询流程日志 -->
+    <select id="selectByAppointmentId" resultMap="BaseResultMap">
+        SELECT * FROM transaction_process_log
+        WHERE appointment_id = #{appointmentId}
+        ORDER BY create_time DESC
+    </select>
+
+    <!-- 根据预约ID和阶段代码查询日志 -->
+    <select id="selectByAppointmentAndStage" resultMap="BaseResultMap">
+        SELECT * FROM transaction_process_log
+        WHERE appointment_id = #{appointmentId}
+        AND stage_code = #{stageCode}
+        LIMIT 1
+    </select>
+
+    <!-- 插入日志 -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO transaction_process_log (
+            appointment_id, stage_code, stage_name, status,
+            operator_id, operator_name, remark, attachment_urls,
+            create_time, update_time
+        ) VALUES (
+            #{appointmentId}, #{stageCode}, #{stageName}, #{status},
+            #{operatorId}, #{operatorName}, #{remark}, #{attachmentUrls},
+            #{createTime}, NOW()
+        )
+    </insert>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        SELECT * FROM transaction_process_log
+        WHERE id = #{id}
+    </select>
+
+</mapper>

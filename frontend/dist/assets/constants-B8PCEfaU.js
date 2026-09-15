@@ -1,0 +1,1 @@
+const a=0,l=1,e=2,b=[{label:"住宅",value:a},{label:"公寓",value:l},{label:"别墅",value:e}],s={[a]:"住宅",[l]:"公寓",[e]:"别墅"},u=0,v=1,c=[{label:"出租",value:u},{label:"出售",value:v}],o={[u]:"出租",[v]:"出售"},t=0,n=1,p=2,r=3,x=4,P={[t]:"待审核",[n]:"审核通过",[p]:"已驳回",[r]:"已上架",[x]:"已下架"};export{s as P,o as T,b as a,c as b,P as c};

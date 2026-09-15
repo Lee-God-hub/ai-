@@ -1,0 +1,236 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.detail-page.data-v-142ae9cd {
+  background: #f5f5f5;
+  min-height: 100vh;
+  padding-bottom: 120rpx;
+}
+.loading-container.data-v-142ae9cd {
+  display: flex;
+  justify-content: center;
+  padding: 100rpx 20rpx;
+}
+.loading-text.data-v-142ae9cd {
+  font-size: 26rpx;
+  color: #606266;
+}
+.image-section.data-v-142ae9cd {
+  position: relative;
+}
+.image-swiper.data-v-142ae9cd {
+  height: 500rpx;
+}
+.swiper-image.data-v-142ae9cd {
+  width: 100%;
+  height: 100%;
+}
+.favorite-btn.data-v-142ae9cd {
+  position: absolute;
+  top: 40rpx;
+  right: 40rpx;
+  width: 80rpx;
+  height: 80rpx;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.favorite-icon.data-v-142ae9cd {
+  font-size: 40rpx;
+}
+.card.data-v-142ae9cd {
+  background: #fff;
+  margin: 20rpx;
+  padding: 30rpx;
+  border-radius: 16rpx;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+.basic-info.data-v-142ae9cd {
+  margin-top: 0;
+}
+.property-title.data-v-142ae9cd {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #303133;
+  margin-bottom: 20rpx;
+  line-height: 1.4;
+}
+.property-price.data-v-142ae9cd {
+  margin-bottom: 20rpx;
+}
+.price.data-v-142ae9cd {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #f56c6c;
+}
+.price-unit.data-v-142ae9cd {
+  font-size: 28rpx;
+  color: #909399;
+  margin-left: 8rpx;
+}
+.property-tags.data-v-142ae9cd {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+  margin-bottom: 20rpx;
+}
+.tag.data-v-142ae9cd {
+  padding: 8rpx 16rpx;
+  border-radius: 12rpx;
+  font-size: 22rpx;
+  color: #fff;
+}
+.primary-tag.data-v-142ae9cd {
+  background: #3c9cff;
+}
+.success-tag.data-v-142ae9cd {
+  background: #19be6b;
+}
+.info-tag.data-v-142ae9cd {
+  background: #909399;
+}
+.property-address.data-v-142ae9cd {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+  font-size: 28rpx;
+  color: #606266;
+}
+.location-icon.data-v-142ae9cd {
+  font-size: 16rpx;
+}
+.section-title.data-v-142ae9cd {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #303133;
+  margin-bottom: 24rpx;
+}
+.description-content.data-v-142ae9cd {
+  font-size: 28rpx;
+  color: #606266;
+  line-height: 1.6;
+}
+.config-grid.data-v-142ae9cd {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24rpx;
+}
+.config-item.data-v-142ae9cd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+.config-label.data-v-142ae9cd {
+  font-size: 26rpx;
+  color: #909399;
+}
+.config-value.data-v-142ae9cd {
+  font-size: 26rpx;
+  color: #303133;
+  font-weight: 500;
+}
+.facilities-list.data-v-142ae9cd {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+.facility-tag.data-v-142ae9cd {
+  padding: 8rpx 16rpx;
+  background: #f0f0f0;
+  color: #606266;
+  border-radius: 12rpx;
+  font-size: 22rpx;
+}
+.landlord-info.data-v-142ae9cd {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+}
+.landlord-avatar.data-v-142ae9cd {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background: #3c9cff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.avatar-text.data-v-142ae9cd {
+  font-size: 24rpx;
+  color: #fff;
+  font-weight: bold;
+}
+.landlord-details.data-v-142ae9cd {
+  flex: 1;
+}
+.landlord-name.data-v-142ae9cd {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #303133;
+  margin-bottom: 8rpx;
+}
+.landlord-desc.data-v-142ae9cd {
+  font-size: 24rpx;
+  color: #909399;
+}
+.contact-btn.data-v-142ae9cd {
+  background: #3c9cff;
+  color: #fff;
+  border: none;
+  border-radius: 20rpx;
+  padding: 16rpx 24rpx;
+  font-size: 24rpx;
+}
+.bottom-actions.data-v-142ae9cd {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  padding: 20rpx;
+  border-top: 1rpx solid #e4e7ed;
+  z-index: 100;
+}
+.action-buttons.data-v-142ae9cd {
+  display: flex;
+  gap: 20rpx;
+}
+.appointment-btn.data-v-142ae9cd, .consult-btn.data-v-142ae9cd {
+  flex: 1;
+  padding: 24rpx;
+  border-radius: 12rpx;
+  font-size: 28rpx;
+  border: none;
+}
+.appointment-btn.data-v-142ae9cd {
+  background: #f0f0f0;
+  color: #606266;
+}
+.consult-btn.data-v-142ae9cd {
+  background: #3c9cff;
+  color: #fff;
+}

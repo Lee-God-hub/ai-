@@ -1,0 +1,215 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.qa-page.data-v-6c808026 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f5f5f5;
+}
+.messages-container.data-v-6c808026 {
+  flex: 1;
+  padding: 20rpx;
+}
+.welcome-section.data-v-6c808026 {
+  text-align: center;
+  padding: 100rpx 40rpx;
+}
+.welcome-avatar.data-v-6c808026 {
+  margin-bottom: 30rpx;
+}
+.welcome-title.data-v-6c808026 {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #303133;
+  margin-bottom: 16rpx;
+}
+.welcome-desc.data-v-6c808026 {
+  font-size: 28rpx;
+  color: #606266;
+  margin-bottom: 40rpx;
+}
+.quick-questions.data-v-6c808026 {
+  text-align: left;
+}
+.quick-title.data-v-6c808026 {
+  font-size: 26rpx;
+  color: #909399;
+  margin-bottom: 20rpx;
+}
+.question-tags.data-v-6c808026 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rpx;
+}
+.messages-list.data-v-6c808026 {
+  padding-bottom: 20rpx;
+}
+.message-item.data-v-6c808026 {
+  margin-bottom: 30rpx;
+}
+.message-content.data-v-6c808026 {
+  display: flex;
+  gap: 20rpx;
+  max-width: 80%;
+}
+.user-message.data-v-6c808026 {
+  margin-left: auto;
+  flex-direction: row-reverse;
+}
+.ai-message.data-v-6c808026 {
+  margin-right: auto;
+}
+.message-bubble.data-v-6c808026 {
+  padding: 20rpx 24rpx;
+  border-radius: 20rpx;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+.user-bubble.data-v-6c808026 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+}
+.ai-bubble.data-v-6c808026 {
+  background: #fff;
+  color: #303133;
+  box-shadow: 0 2rpx 8rpx rgba(0, 0, 0, 0.1);
+}
+.loading-bubble.data-v-6c808026 {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  background: #fff;
+  color: #3c9cff;
+}
+.message-text.data-v-6c808026 {
+  font-size: 28rpx;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+.message-time.data-v-6c808026 {
+  font-size: 22rpx;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 12rpx;
+  display: block;
+}
+.ai-bubble .message-time.data-v-6c808026 {
+  color: #909399;
+}
+.loading-text.data-v-6c808026 {
+  font-size: 26rpx;
+}
+.related-questions.data-v-6c808026 {
+  margin-top: 20rpx;
+  padding-top: 20rpx;
+  border-top: 1rpx solid #e4e7ed;
+}
+.related-title.data-v-6c808026 {
+  font-size: 24rpx;
+  color: #606266;
+  margin-bottom: 16rpx;
+  font-weight: 500;
+}
+.related-tags.data-v-6c808026 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12rpx;
+}
+.input-section.data-v-6c808026 {
+  background: #fff;
+  border-top: 1rpx solid #e4e7ed;
+  padding: 20rpx;
+}
+.input-container.data-v-6c808026 {
+  display: flex;
+  align-items: flex-end;
+  gap: 20rpx;
+  background: #f5f5f5;
+  border-radius: 20rpx;
+  padding: 16rpx 20rpx;
+}
+.input-field.data-v-6c808026 {
+  flex: 1;
+  min-height: 80rpx;
+  max-height: 200rpx;
+}
+.input-actions.data-v-6c808026 {
+  flex-shrink: 0;
+}
+
+/* 新增样式 */
+.avatar-icon.data-v-6c808026 {
+  font-size: 60rpx;
+}
+.avatar-text.data-v-6c808026 {
+  font-size: 30rpx;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background: #3c9cff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.user-message .avatar-text.data-v-6c808026 {
+  background: #909399;
+}
+.question-tag.data-v-6c808026 {
+  padding: 8rpx 16rpx;
+  background: #e3f2fd;
+  color: #3c9cff;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+  border: 1rpx solid #3c9cff;
+}
+.related-tag.data-v-6c808026 {
+  padding: 4rpx 12rpx;
+  background: #f0f0f0;
+  color: #606266;
+  border-radius: 12rpx;
+  font-size: 22rpx;
+  border: 1rpx solid #e4e7ed;
+}
+.send-btn.data-v-6c808026 {
+  background: #3c9cff;
+  color: #fff;
+  border: none;
+  border-radius: 20rpx;
+  padding: 12rpx 24rpx;
+  font-size: 26rpx;
+}
+.send-btn.disabled.data-v-6c808026 {
+  background: #c0c4cc;
+  color: #fff;
+}
+.input-field.data-v-6c808026 {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 28rpx;
+  line-height: 1.5;
+  resize: none;
+}
+.loading-icon.data-v-6c808026 {
+  font-size: 18rpx;
+}

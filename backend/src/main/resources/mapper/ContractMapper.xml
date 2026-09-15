@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.smartproperty.mapper.ContractMapper">
+    
+    <resultMap id="BaseResultMap" type="com.smartproperty.entity.Contract">
+        <id column="id" property="id" />
+        <result column="appointment_id" property="appointmentId" />
+        <result column="contract_no" property="contractNo" />
+        <result column="contract_type" property="contractType" />
+        <result column="party_a_id" property="partyAId" />
+        <result column="party_a_name" property="partyAName" />
+        <result column="party_b_id" property="partyBId" />
+        <result column="party_b_name" property="partyBName" />
+        <result column="property_id" property="propertyId" />
+        <result column="contract_amount" property="contractAmount" />
+        <result column="start_date" property="startDate" />
+        <result column="end_date" property="endDate" />
+        <result column="sign_status" property="signStatus" />
+        <result column="contract_content" property="contractContent" />
+        <result column="attachment_urls" property="attachmentUrls" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 根据预约ID查询合同 -->
+    <select id="selectByAppointmentId" resultMap="BaseResultMap">
+        SELECT * FROM contract
+        WHERE appointment_id = #{appointmentId}
+        ORDER BY create_time DESC
+        LIMIT 1
+    </select>
+
+    <!-- 插入合同 -->
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO contract (
+            appointment_id, contract_no, contract_type,
+            party_a_id, party_a_name, party_b_id, party_b_name,
+            property_id, contract_amount, start_date, end_date,
+            sign_status, contract_content, attachment_urls,
+            create_time, update_time
+        ) VALUES (
+            #{appointmentId}, #{contractNo}, #{contractType},
+            #{partyAId}, #{partyAName}, #{partyBId}, #{partyBName},
+            #{propertyId}, #{contractAmount}, #{startDate}, #{endDate},
+            #{signStatus}, #{contractContent}, #{attachmentUrls},
+            NOW(), NOW()
+        )
+    </insert>
+
+    <!-- 更新合同 -->
+    <update id="updateById">
+        UPDATE contract
+        SET contract_amount = #{contractAmount},
+            start_date = #{startDate},
+            end_date = #{endDate},
+            sign_status = #{signStatus},
+            contract_content = #{contractContent},
+            attachment_urls = #{attachmentUrls},
+            update_time = NOW()
+        WHERE id = #{id}
+    </update>
+
+    <!-- 根据ID查询 -->
+    <select id="selectById" resultMap="BaseResultMap">
+        SELECT * FROM contract
+        WHERE id = #{id}
+    </select>
+
+</mapper>

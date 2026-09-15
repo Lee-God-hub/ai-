@@ -1,0 +1,276 @@
+/**
+ * 爬虫获取的真实房源数据
+ * 模拟从房产网站爬取的房源信息
+ */
+
+// 爬虫获取的房源列表数据
+export const crawlerProperties = [
+  {
+    id: 1001,
+    title: '龙华区 锦绣江南 精装三房 近地铁4号线',
+    price: 4200,
+    priceType: 0,
+    area: 89,
+    rooms: 3,
+    halls: 2,
+    bathrooms: 1,
+    floor: '12/28层',
+    orientation: '南北通透',
+    decoration: '精装修',
+    address: '深圳市龙华区民治街道锦绣江南小区',
+    community: '锦绣江南',
+    district: '龙华区',
+    city: '深圳',
+    coverImage: 'https://picsum.photos/seed/webhouse1001_1/600/450',
+    images: [
+      'https://picsum.photos/seed/webhouse1001_1/800/600',
+      'https://picsum.photos/seed/webhouse1001_2/800/600',
+      'https://picsum.photos/seed/webhouse1001_3/800/600'
+    ],
+    description: '小区环境优美，物业管理完善，周边配套齐全，步行5分钟到地铁4号线红山站，旁边就是大型商场和超市，生活非常便利。房屋精装修，家电齐全，拎包入住。',
+    facilities: ['空调', '洗衣机', '冰箱', '热水器', '宽带', '天然气', '电梯', '车位'],
+    publisherName: '张房东',
+    publisherPhone: '138****8888',
+    status: 0,
+    createTime: '2024-06-20 10:30:00',
+    source: '安居客',
+    crawlerTime: '2024-06-25 14:22:00'
+  },
+  {
+    id: 1002,
+    title: '南山区 科技园 阳光海景豪苑 单身公寓',
+    price: 3800,
+    priceType: 0,
+    area: 35,
+    rooms: 1,
+    halls: 0,
+    bathrooms: 1,
+    floor: '8/22层',
+    orientation: '东南',
+    decoration: '豪华装修',
+    address: '深圳市南山区科技园阳光海景豪苑',
+    community: '阳光海景豪苑',
+    district: '南山区',
+    city: '深圳',
+    coverImage: 'https://picsum.photos/seed/webhouse1002_1/600/450',
+    images: [
+      'https://picsum.photos/seed/webhouse1002_1/800/600',
+      'https://picsum.photos/seed/webhouse1002_2/800/600'
+    ],
+    description: '科技园核心地段，步行可达腾讯、百度、阿里等互联网公司，适合IT白领居住。高层海景房，视野开阔，采光通风好。',
+    facilities: ['空调', '洗衣机', '冰箱', '热水器', '宽带', '电梯'],
+    publisherName: '李房东',
+    publisherPhone: '139****6666',
+    status: 0,
+    createTime: '2024-06-22 15:45:00',
+    source: '链家',
+    crawlerTime: '2024-06-25 14:25:00'
+  },
+  {
+    id: 1003,
+    title: '福田区 香蜜湖 香蜜三村 四房两厅 学区房',
+    price: 8500,
+    priceType: 0,
+    area: 128,
+    rooms: 4,
+    halls: 2,
+    bathrooms: 2,
+    floor: '6/18层',
+    orientation: '正南',
+    decoration: '精装修',
+    address: '深圳市福田区香蜜湖街道香蜜三村',
+    community: '香蜜三村',
+    district: '福田区',
+    city: '深圳',
+    coverImage: 'https://picsum.photos/seed/webhouse1003_1/600/450',
+    images: [
+      'https://picsum.photos/seed/webhouse1003_1/800/600',
+      'https://picsum.photos/seed/webhouse1003_2/800/600'
+    ],
+    description: '香蜜湖学区房，带学位，小区绿化好，安静舒适，周边有香蜜公园，环境优美。适合家庭居住，配套学校、医院、商场一应俱全。',
+    facilities: ['空调', '洗衣机', '冰箱', '热水器', '宽带', '天然气', '车位', '储物间'],
+    publisherName: '王房东',
+    publisherPhone: '137****5555',
+    status: 0,
+    createTime: '2024-06-18 09:20:00',
+    source: '贝壳找房',
+    crawlerTime: '2024-06-25 14:28:00'
+  },
+  {
+    id: 1004,
+    title: '宝安区 西乡 碧海富通城 两房一厅 近地铁11号线',
+    price: 3600,
+    priceType: 0,
+    area: 68,
+    rooms: 2,
+    halls: 1,
+    bathrooms: 1,
+    floor: '15/32层',
+    orientation: '西南',
+    decoration: '简装修',
+    address: '深圳市宝安区西乡街道碧海富通城',
+    community: '碧海富通城',
+    district: '宝安区',
+    city: '深圳',
+    coverImage: 'https://picsum.photos/seed/webhouse1004_1/600/450',
+    images: [
+      'https://picsum.photos/seed/webhouse1004_1/800/600',
+      'https://picsum.photos/seed/webhouse1004_2/800/600'
+    ],
+    description: '近地铁11号线碧海湾站，通勤便利，小区周边有大型商超，生活方便。房屋干净整洁，采光好，适合年轻情侣或小家庭。',
+    facilities: ['空调', '洗衣机', '热水器', '宽带', '电梯'],
+    publisherName: '陈房东',
+    publisherPhone: '136****4444',
+    status: 0,
+    createTime: '2024-06-23 11:10:00',
+    source: '58同城',
+    crawlerTime: '2024-06-25 14:30:00'
+  },
+  {
+    id: 1005,
+    title: '龙岗区 布吉 桂芳园 复式三房 带花园',
+    price: 5200,
+    priceType: 0,
+    area: 98,
+    rooms: 3,
+    halls: 2,
+    bathrooms: 2,
+    floor: '1-2/6层',
+    orientation: '南北',
+    decoration: '精装修',
+    address: '深圳市龙岗区布吉街道桂芳园',
+    community: '桂芳园',
+    district: '龙岗区',
+    city: '深圳',
+    coverImage: 'https://picsum.photos/seed/webhouse1005_1/600/450',
+    images: [
+      'https://picsum.photos/seed/webhouse1005_1/800/600',
+      'https://picsum.photos/seed/webhouse1005_2/800/600'
+    ],
+    description: '低密度花园小区，复式结构带私家花园，环境清幽，适合喜欢养花种草的家庭。周边配套成熟，交通便利。',
+    facilities: ['空调', '洗衣机', '冰箱', '热水器', '宽带', '天然气', '花园'],
+    publisherName: '刘房东',
+    publisherPhone: '135****3333',
+    status: 0,
+    createTime: '2024-06-19 16:30:00',
+    source: '安居客',
+    crawlerTime: '2024-06-25 14:32:00'
+  },
+  {
+    id: 1006,
+    title: '罗湖区 东门 港澳8号 一房一厅 精装修',
+    price: 3200,
+    priceType: 0,
+    area: 42,
+    rooms: 1,
+    halls: 1,
+    bathrooms: 1,
+    floor: '20/30层',
+    orientation: '东',
+    decoration: '精装修',
+    address: '深圳市罗湖区东门街道港澳8号',
+    community: '港澳8号',
+    district: '罗湖区',
+    city: '深圳',
+    coverImage: 'https://picsum.photos/seed/webhouse1006_1/600/450',
+    images: [
+      'https://picsum.photos/seed/webhouse1006_1/800/600',
+      'https://picsum.photos/seed/webhouse1006_2/800/600'
+    ],
+    description: '东门商圈核心位置，步行到老街地铁站，购物娱乐方便。高层视野好，精装修，家电齐全，适合单身白领。',
+    facilities: ['空调', '洗衣机', '冰箱', '热水器', '宽带', '电梯'],
+    publisherName: '赵房东',
+    publisherPhone: '134****2222',
+    status: 0,
+    createTime: '2024-06-24 08:50:00',
+    source: '链家',
+    crawlerTime: '2024-06-25 14:35:00'
+  },
+  {
+    id: 1007,
+    title: '南山区 后海 太古城 两房 近深圳湾口岸',
+    price: 6800,
+    priceType: 0,
+    area: 76,
+    rooms: 2,
+    halls: 2,
+    bathrooms: 1,
+    floor: '18/26层',
+    orientation: '东南',
+    decoration: '豪华装修',
+    address: '深圳市南山区后海太古城',
+    community: '太古城',
+    district: '南山区',
+    city: '深圳',
+    coverImage: 'https://picsum.photos/seed/webhouse1007_1/600/450',
+    images: [
+      'https://picsum.photos/seed/webhouse1007_1/800/600',
+      'https://picsum.photos/seed/webhouse1007_2/800/600'
+    ],
+    description: '后海豪宅区，近深圳湾口岸和海岸城购物中心，高端物业管理，小区配套泳池、健身房。豪华装修，品质生活首选。',
+    facilities: ['空调', '洗衣机', '冰箱', '热水器', '宽带', '天然气', '电梯', '泳池', '健身房', '车位'],
+    publisherName: '孙房东',
+    publisherPhone: '133****1111',
+    status: 0,
+    createTime: '2024-06-21 14:00:00',
+    source: '贝壳找房',
+    crawlerTime: '2024-06-25 14:38:00'
+  },
+  {
+    id: 1008,
+    title: '宝安区 宝安中心 宏发领域 三房 近壹方城',
+    price: 7500,
+    priceType: 0,
+    area: 110,
+    rooms: 3,
+    halls: 2,
+    bathrooms: 2,
+    floor: '10/32层',
+    orientation: '南北通透',
+    decoration: '精装修',
+    address: '深圳市宝安区新安街道宏发领域',
+    community: '宏发领域',
+    district: '宝安区',
+    city: '深圳',
+    coverImage: 'https://picsum.photos/seed/webhouse1008_1/600/450',
+    images: [
+      'https://picsum.photos/seed/webhouse1008_1/800/600',
+      'https://picsum.photos/seed/webhouse1008_2/800/600'
+    ],
+    description: '宝安中心区核心位置，紧邻壹方城购物中心，地铁1号线宝安中心站步行3分钟。小区配套完善，生活便利，适合家庭居住。',
+    facilities: ['空调', '洗衣机', '冰箱', '热水器', '宽带', '天然气', '电梯', '车位'],
+    publisherName: '周房东',
+    publisherPhone: '132****9999',
+    status: 0,
+    createTime: '2024-06-17 13:25:00',
+    source: '58同城',
+    crawlerTime: '2024-06-25 14:40:00'
+  }
+]
+
+// 用户列表数据
+export const crawlerUsers = [
+  { id: 2001, username: '林同学', phone: '138****1234', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=lin' },
+  { id: 2002, username: '王小明', phone: '139****5678', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=wang' },
+  { id: 2003, username: '张女士', phone: '137****9012', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=zhang' },
+  { id: 2004, username: '李先生', phone: '136****3456', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=li' },
+  { id: 2005, username: '陈小姐', phone: '135****7890', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=chen' },
+  { id: 2006, username: '刘先生', phone: '134****2345', avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=liu' }
+]
+
+// 生成收藏数据（用户收藏房源的关联）
+export const crawlerFavorites = crawlerProperties.map((property, index) => ({
+  id: 3001 + index,
+  userId: crawlerUsers[index % crawlerUsers.length].id,
+  propertyId: property.id,
+  user: crawlerUsers[index % crawlerUsers.length],
+  property: property,
+  createTime: new Date(Date.now() - Math.random() * 7 * 24 * 60 * 60 * 1000).toISOString().replace('T', ' ').substring(0, 19)
+}))
+
+// 待审核房源数据（新爬取/发布的房源）
+export const pendingCrawlerProperties = crawlerProperties.slice(0, 5).map(p => ({
+  ...p,
+  status: 0,
+  createTime: new Date(Date.now() - Math.random() * 3 * 24 * 60 * 60 * 1000).toISOString().replace('T', ' ').substring(0, 19)
+}))
